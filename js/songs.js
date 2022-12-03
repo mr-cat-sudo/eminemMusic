@@ -6,7 +6,7 @@ let songIndex = 0;
 let songItems = Array.from(document.getElementsByClassName("main-grid-container"));
 
 let songs = [
-    {number:1, views:"23,40,45,567", time:"3:45", songName: "Milne Hai Mujhse ayi", songPath:"../arijitsirsongs/1.mp3", coverPath:"../arijitsircovers/cover1.jpg"},
+    {number:1, views:"23,40,45,567", time:"3:45", songName: "Milne Hai Mujhse ayi", songPath:"./arijitsirsongs/1.mp3", coverPath:"./arijitsircovers/cover1.jpg"},
     {number:2, views:"2,734,576,12", time:"5:10", songName: "Tum hi Ho", songPath:"../arijitsirsongs/2.mp3", coverPath:"../arijitsircovers/cover2.jpg"},
     {number:3, views:"8,512,546,73", time:"3:59", songName: "Khairiyat", songPath:"../arijitsirsongs/3.mp3", coverPath:"../arijitsircovers/cover3.jpg"},
     {number:4, views:"12,00,345,67", time:"4:42", songName: "Lo Maan Liya", songPath:"../arijitsirsongs/4.mp3", coverPath:"../arijitsircovers/cover4.jpeg"},
