@@ -1,7 +1,7 @@
 let masterPlay = document.getElementById("masterPlay");
 let masterPause = document.getElementById("masterPause");
 // const myProgressBar = document.getElementById("myProgressBar");
-let songElement = new Audio("../arijitsirsongs/1.mp3");
+let songElement = new Audio("./arijitsirsongs/1.mp3");
 let songIndex = 0;
 let songItems = Array.from(document.getElementsByClassName("main-grid-container"));
 
@@ -69,7 +69,7 @@ Array.from(document.getElementsByClassName("song-index-play-btn")).forEach((elem
     element.addEventListener('click', (e)=>{
         // console.log(e.target.id);
         index = parseInt(e.target.id)
-        songElement.src = `../arijitsirsongs/${index+1}.mp3`;
+        songElement.src = `./arijitsirsongs/${index+1}.mp3`;
         songElement.play();
         songElement.currentTime = 0
         masterPlay.style.display = "none";
