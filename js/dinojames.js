@@ -1,18 +1,18 @@
 let masterPlay = document.getElementById("masterPlay");
 let masterPause = document.getElementById("masterPause");
 // const myProgressBar = document.getElementById("myProgressBar");
-let songElement = new Audio("../dinojamessongs/1.mp3");
+let songElement = new Audio("./dinojamessongs/1.mp3");
 let songIndex = 0;
 let songItems = Array.from(document.getElementsByClassName("main-grid-container"));
 
 let songs = [
-    {number:1, views:"23,40,45,567", time:"3:45", songName: "Girlfriend", songPath:"../dinojamessongs/1.mp3", coverPath:"../dinojamescovers/cover1.jpg"},
-    {number:2, views:"2,734,576,12", time:"5:10", songName: "Handcock", songPath:"../dinojamessongs/2.mp3", coverPath:"./dinojamescovers/cover2.jpg"},
-    {number:3, views:"8,512,546,73", time:"3:59", songName: "Loser", songPath:"../dinojamessongs/3.mp3", coverPath:"../dinojamescovers/cover3.jpeg"},
-    {number:4, views:"12,00,345,67", time:"4:42", songName: "Lost", songPath:"../dinojamessongs/4.mp3", coverPath:"../dinojamescovers/cover4.jpeg"},
-    {number:5, views:"14,23,567,78", time:"4:16", songName: "Mirage", songPath:"../dinojamessongs/5.mp3", coverPath:"../dinojamescovers/cover5.jpg"},
-    {number:6, views:"2,35,456,764", time:"4:19", songName: "Unstopabble", songPath:"../dinojamessongs/6.mp3", coverPath:"../dinojamescovers/cover6.jpeg"},
-    {number:7, views:"3,94,567,981", time:"5:01", songName: "Yaadein", songPath:"../dinojamessongs/7.mp3", coverPath:"../dinojamescovers/cover7.jpeg"},
+    {number:1, views:"23,40,45,567", time:"3:45", songName: "Girlfriend", songPath:"./dinojamessongs/1.mp3", coverPath:"./dinojamescovers/cover1.jpg"},
+    {number:2, views:"2,734,576,12", time:"5:10", songName: "Handcock", songPath:"./dinojamessongs/2.mp3", coverPath:"./dinojamescovers/cover2.jpg"},
+    {number:3, views:"8,512,546,73", time:"3:59", songName: "Loser", songPath:"./dinojamessongs/3.mp3", coverPath:"./dinojamescovers/cover3.jpeg"},
+    {number:4, views:"12,00,345,67", time:"4:42", songName: "Lost", songPath:"./dinojamessongs/4.mp3", coverPath:"./dinojamescovers/cover4.jpeg"},
+    {number:5, views:"14,23,567,78", time:"4:16", songName: "Mirage", songPath:"./dinojamessongs/5.mp3", coverPath:"./dinojamescovers/cover5.jpg"},
+    {number:6, views:"2,35,456,764", time:"4:19", songName: "Unstopabble", songPath:"./dinojamessongs/6.mp3", coverPath:"./dinojamescovers/cover6.jpeg"},
+    {number:7, views:"3,94,567,981", time:"5:01", songName: "Yaadein", songPath:"./dinojamessongs/7.mp3", coverPath:"./dinojamescovers/cover7.jpeg"},
 
     
 ]
@@ -67,7 +67,7 @@ Array.from(document.getElementsByClassName("song-index-play-btn")).forEach((elem
     element.addEventListener('click', (e)=>{
         // console.log(e.target.id);
         index = parseInt(e.target.id)
-        songElement.src = `../dinojamessongs/${index+1}.mp3`;
+        songElement.src = `./dinojamessongs/${index+1}.mp3`;
         songElement.play();
         songElement.currentTime = 0
         masterPlay.style.display = "none";
@@ -87,7 +87,7 @@ document.getElementById("next").addEventListener("click", ()=>{
     else{
         index+=1;
     }
-    songElement.src = `../dinojamessongs/${index+1}.mp3`;
+    songElement.src = `./dinojamessongs/${index+1}.mp3`;
     songElement.play();
     songElement.currentTime = 0
     masterPlay.style.display = "none";
@@ -103,7 +103,7 @@ document.getElementById("previous").addEventListener("click", ()=>{
     else{
         index -= 1;
     }
-    songElement.src = `../dinojamessongs/${index+1}.mp3`;
+    songElement.src = `./dinojamessongs/${index+1}.mp3`;
     songElement.play();
     songElement.currentTime = 0
     masterPlay.style.display = "none";
