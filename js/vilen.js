@@ -1,17 +1,17 @@
 let masterPlay = document.getElementById("masterPlay");
 let masterPause = document.getElementById("masterPause");
 // const myProgressBar = document.getElementById("myProgressBar");
-let songElement = new Audio("../vilensongs/1.mp3");
+let songElement = new Audio("./vilensongs/1.mp3");
 
 let songIndex = 0;
 let songItems = Array.from(document.getElementsByClassName("main-grid-container"));
 
 let songs = [
-    {number:1, views:"23,40,45,567", time:"3:45", songName: "Eak raat", songPath:"../vilensongs/1.mp3", coverPath:"../vilencovers/cover1.jpg"},
-    {number:2, views:"2,734,576,12", time:"5:10", songName: "Jawani", songPath:"../vilensongs/2.mp3", coverPath:"../vilencovers/cover2.jpg"},
-    {number:3, views:"8,512,546,73", time:"3:59", songName: "Chidiya", songPath:"../vilensongs/3.mp3", coverPath:"../vilencovers/cover3.jpg"},
-    {number:4, views:"12,00,345,67", time:"4:42", songName: "Ravan", songPath:"../vilensongs/4.mp3", coverPath:"../vilencovers/cover4.jpg"},
-    {number:5, views:"14,23,567,78", time:"4:16", songName: "Savan", songPath:"../vilensongs/5.mp3", coverPath:"../vilencovers/cover5.jpg"},
+    {number:1, views:"23,40,45,567", time:"3:45", songName: "Eak raat", songPath:"./vilensongs/1.mp3", coverPath:"./vilencovers/cover1.jpg"},
+    {number:2, views:"2,734,576,12", time:"5:10", songName: "Jawani", songPath:"./vilensongs/2.mp3", coverPath:"./vilencovers/cover2.jpg"},
+    {number:3, views:"8,512,546,73", time:"3:59", songName: "Chidiya", songPath:"./vilensongs/3.mp3", coverPath:"./vilencovers/cover3.jpg"},
+    {number:4, views:"12,00,345,67", time:"4:42", songName: "Ravan", songPath:"./vilensongs/4.mp3", coverPath:"./vilencovers/cover4.jpg"},
+    {number:5, views:"14,23,567,78", time:"4:16", songName: "Savan", songPath:"./vilensongs/5.mp3", coverPath:"./vilencovers/cover5.jpg"},
   
 ]
 // redner the all songs name dynamicly
@@ -65,7 +65,7 @@ Array.from(document.getElementsByClassName("song-index-play-btn")).forEach((elem
     element.addEventListener('click', (e)=>{
         // console.log(e.target.id);
         index = parseInt(e.target.id)
-        songElement.src = `../vilensongs/${index+1}.mp3`;
+        songElement.src = `./vilensongs/${index+1}.mp3`;
         songElement.play();
         songElement.currentTime = 0
         masterPlay.style.display = "none";
@@ -85,7 +85,7 @@ document.getElementById("next").addEventListener("click", ()=>{
     else{
         index+=1;
     }
-    songElement.src = `../vilensongs/${index+1}.mp3`;
+    songElement.src = `./vilensongs/${index+1}.mp3`;
     songElement.play();
     songElement.currentTime = 0
     masterPlay.style.display = "none";
@@ -101,7 +101,7 @@ document.getElementById("previous").addEventListener("click", ()=>{
     else{
         index -= 1;
     }
-    songElement.src = `../vilensongs/${index+1}.mp3`;
+    songElement.src = `./vilensongs/${index+1}.mp3`;
     songElement.play();
     songElement.currentTime = 0
     masterPlay.style.display = "none";
