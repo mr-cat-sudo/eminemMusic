@@ -1,18 +1,18 @@
 let masterPlay = document.getElementById("masterPlay");
 let masterPause = document.getElementById("masterPause");
 const myProgressBar = document.getElementById("myProgressBar");
-let songElement = new Audio("../imaginedragonssongs/1.mp3");
+let songElement = new Audio("./imaginedragonssongs/1.mp3");
 let songIndex = 0;
 let songItems = Array.from(document.getElementsByClassName("main-grid-container"));
 
 let songs = [
-    {number:1, views:"23,40,45,567", time:"3:45", songName: "Battle Cry", songPath:"../imaginedragonssongs/1.mp3", coverPath:"../imaginedragonscovers/cover1.jpg"},
-    {number:2, views:"2,734,576,12", time:"5:10", songName: "Enemy", songPath:"../imaginedragonssongs/2.mp3", coverPath:"../imaginedragonscovers/cover2.jpg"},
-    {number:3, views:"8,512,546,73", time:"3:59", songName: "Bones", songPath:"../imaginedragonssongs/3.mp3", coverPath:"../imaginedragonscovers/cover3.jpg"},
-    {number:4, views:"12,00,345,67", time:"4:42", songName: "Monster", songPath:"../imaginedragonssongs/4.mp3", coverPath:"../imaginedragonscovers/cover4.jpg"},
-    {number:5, views:"14,23,567,78", time:"4:16", songName: "Believer", songPath:"../imaginedragonssongs/5.mp3", coverPath:"../imaginedragonscovers/cover5.jpg"},
-    {number:6, views:"2,35,456,764", time:"4:19", songName: "Radioactive", songPath:"../imaginedragonssongs/6.mp3", coverPath:"../imaginedragonscovers/cover6.jpg"},
-    {number:7, views:"3,94,567,981", time:"5:01", songName: "Demons", songPath:"../imaginedragonssongs/7.mp3", coverPath:"../imaginedragonscovers/cover7.jpg"},
+    {number:1, views:"23,40,45,567", time:"3:45", songName: "Battle Cry", songPath:"./imaginedragonssongs/1.mp3", coverPath:"./imaginedragonscovers/cover1.jpg"},
+    {number:2, views:"2,734,576,12", time:"5:10", songName: "Enemy", songPath:"./imaginedragonssongs/2.mp3", coverPath:"./imaginedragonscovers/cover2.jpg"},
+    {number:3, views:"8,512,546,73", time:"3:59", songName: "Bones", songPath:"./imaginedragonssongs/3.mp3", coverPath:"./imaginedragonscovers/cover3.jpg"},
+    {number:4, views:"12,00,345,67", time:"4:42", songName: "Monster", songPath:"./imaginedragonssongs/4.mp3", coverPath:"./imaginedragonscovers/cover4.jpg"},
+    {number:5, views:"14,23,567,78", time:"4:16", songName: "Believer", songPath:"./imaginedragonssongs/5.mp3", coverPath:"./imaginedragonscovers/cover5.jpg"},
+    {number:6, views:"2,35,456,764", time:"4:19", songName: "Radioactive", songPath:"./imaginedragonssongs/6.mp3", coverPath:"./imaginedragonscovers/cover6.jpg"},
+    {number:7, views:"3,94,567,981", time:"5:01", songName: "Demons", songPath:"./imaginedragonssongs/7.mp3", coverPath:"./imaginedragonscovers/cover7.jpg"},
 ]
 // redner the all songs name dynamicly
 
@@ -65,7 +65,7 @@ Array.from(document.getElementsByClassName("song-index-play-btn")).forEach((elem
     element.addEventListener('click', (e)=>{
         // console.log(e.target.id);
         index = parseInt(e.target.id)
-        songElement.src = `../imaginedragonssongs/${index+1}.mp3`;
+        songElement.src = `./imaginedragonssongs/${index+1}.mp3`;
         songElement.play();
         songElement.currentTime = 0
         masterPlay.style.display = "none";
@@ -85,7 +85,7 @@ document.getElementById("next").addEventListener("click", ()=>{
     else{
         index+=1;
     }
-    songElement.src = `../imaginedragonssongs/${index+1}.mp3`;
+    songElement.src = `./imaginedragonssongs/${index+1}.mp3`;
     songElement.play();
     songElement.currentTime = 0
     masterPlay.style.display = "none";
@@ -101,7 +101,7 @@ document.getElementById("previous").addEventListener("click", ()=>{
     else{
         index -= 1;
     }
-    songElement.src = `../imaginedragonssongs/${index+1}.mp3`;
+    songElement.src = `./imaginedragonssongs/${index+1}.mp3`;
     songElement.play();
     songElement.currentTime = 0
     masterPlay.style.display = "none";
