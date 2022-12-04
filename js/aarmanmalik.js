@@ -1,16 +1,16 @@
 let masterPlay = document.getElementById("masterPlay");
 let masterPause = document.getElementById("masterPause");
 // const myProgressBar = document.getElementById("myProgressBar");
-let songElement = new Audio("../armanmaliksongs/1.mp3");
+let songElement = new Audio("./armanmaliksongs/1.mp3");
 let songIndex = 0;
 let songItems = Array.from(document.getElementsByClassName("main-grid-container"));
 
 let songs = [
-    {number:1, views:"23,40,45,567", time:"3:45", songName: "Besabriyaan", songPath:"../armanmaliksongs/1.mp3", coverPath:"../armanmalikcovers/cover1.jpg"},
-    {number:2, views:"2,734,576,12", time:"5:10", songName: "Kaun Tujhe", songPath:"../armanmaliksongs/2.mp3", coverPath:"../armanmalikcovers/cover2.jpg"},
-    {number:3, views:"8,512,546,73", time:"3:59", songName: "Chale Aana", songPath:"../armanmaliksongs/3.mp3", coverPath:"../armanmalikcovers/cover3.jpg"},
-    {number:4, views:"12,00,345,67", time:"4:42", songName: "Ghr se nikal te hi", songPath:"../armanmaliksongs/4.mp3", coverPath:"../armanmalikcovers/cover4.jpg"},
-    {number:5, views:"14,23,567,78", time:"4:16", songName: "Phir Kabhi", songPath:"../armanmaliksongs/5.mp3", coverPath:"../armanmalikcovers/cover5.jpg"},
+    {number:1, views:"23,40,45,567", time:"3:45", songName: "Besabriyaan", songPath:"./armanmaliksongs/1.mp3", coverPath:"./armanmalikcovers/cover1.jpg"},
+    {number:2, views:"2,734,576,12", time:"5:10", songName: "Kaun Tujhe", songPath:"./armanmaliksongs/2.mp3", coverPath:"./armanmalikcovers/cover2.jpg"},
+    {number:3, views:"8,512,546,73", time:"3:59", songName: "Chale Aana", songPath:"./armanmaliksongs/3.mp3", coverPath:"./armanmalikcovers/cover3.jpg"},
+    {number:4, views:"12,00,345,67", time:"4:42", songName: "Ghr se nikal te hi", songPath:"./armanmaliksongs/4.mp3", coverPath:"./armanmalikcovers/cover4.jpg"},
+    {number:5, views:"14,23,567,78", time:"4:16", songName: "Phir Kabhi", songPath:"./armanmaliksongs/5.mp3", coverPath:"./armanmalikcovers/cover5.jpg"},
 ]
 // redner the all songs name dynamicly
 
@@ -63,7 +63,7 @@ Array.from(document.getElementsByClassName("song-index-play-btn")).forEach((elem
     element.addEventListener('click', (e)=>{
         // console.log(e.target.id);
         index = parseInt(e.target.id)
-        songElement.src = `../armanmaliksongs/${index+1}.mp3`;
+        songElement.src = `./armanmaliksongs/${index+1}.mp3`;
         songElement.play();
         songElement.currentTime = 0
         masterPlay.style.display = "none";
@@ -83,7 +83,7 @@ document.getElementById("next").addEventListener("click", ()=>{
     else{
         index+=1;
     }
-    songElement.src = `../armanmaliksongs/${index+1}.mp3`;
+    songElement.src = `./armanmaliksongs/${index+1}.mp3`;
     songElement.play();
     songElement.currentTime = 0
     masterPlay.style.display = "none";
@@ -99,7 +99,7 @@ document.getElementById("previous").addEventListener("click", ()=>{
     else{
         index -= 1;
     }
-    songElement.src = `../armanmaliksongs/${index+1}.mp3`;
+    songElement.src = `./armanmaliksongs/${index+1}.mp3`;
     songElement.play();
     songElement.currentTime = 0
     masterPlay.style.display = "none";
