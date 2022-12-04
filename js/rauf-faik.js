@@ -1,17 +1,17 @@
 let masterPlay = document.getElementById("masterPlay");
 let masterPause = document.getElementById("masterPause");
 // const myProgressBar = document.getElementById("myProgressBar");
-let songElement = new Audio("../rauf-faiksongs/1.mp3");
+let songElement = new Audio("./rauf-faiksongs/1.mp3");
 let songIndex = 0;
 let songItems = Array.from(document.getElementsByClassName("main-grid-container"));
 
 let songs = [
-    {number:1, views:"23,40,45,567", time:"3:45", songName: "5 Minutes", songPath:"../rauf-faiksongs/1.mp3", coverPath:"../rauf-faikcovers/cover1.jpg"},
-    {number:2, views:"2,734,576,12", time:"5:10", songName: "Childhood", songPath:"../rauf-faiksongs/2.mp3", coverPath:"../rauf-faikcovers/cover2.jpg"},
-    {number:3, views:"8,512,546,73", time:"3:59", songName: "Mama", songPath:"../rauf-faiksongs/3.mp3", coverPath:"../rauf-faikcovers/cover3.jpg"},
-    {number:4, views:"12,00,345,67", time:"4:42", songName: "Evenings", songPath:"../rauf-faiksongs/4.mp3", coverPath:"../rauf-faikcovers/cover4.jpeg"},
-    {number:5, views:"14,23,567,78", time:"4:16", songName: "колыбельная", songPath:"../rauf-faiksongs/5.mp3", coverPath:"../rauf-faikcovers/cover5.jpg"},
-    {number:6, views:"2,35,456,764", time:"4:19", songName: "Can't Buy me Loving", songPath:"../rauf-faiksongs/6.mp3", coverPath:"../rauf-faikcovers/cover6.jpg"},    
+    {number:1, views:"23,40,45,567", time:"3:45", songName: "5 Minutes", songPath:"./rauf-faiksongs/1.mp3", coverPath:"./rauf-faikcovers/cover1.jpg"},
+    {number:2, views:"2,734,576,12", time:"5:10", songName: "Childhood", songPath:"./rauf-faiksongs/2.mp3", coverPath:"./rauf-faikcovers/cover2.jpg"},
+    {number:3, views:"8,512,546,73", time:"3:59", songName: "Mama", songPath:"./rauf-faiksongs/3.mp3", coverPath:"./rauf-faikcovers/cover3.jpg"},
+    {number:4, views:"12,00,345,67", time:"4:42", songName: "Evenings", songPath:"./rauf-faiksongs/4.mp3", coverPath:"./rauf-faikcovers/cover4.jpeg"},
+    {number:5, views:"14,23,567,78", time:"4:16", songName: "колыбельная", songPath:"./rauf-faiksongs/5.mp3", coverPath:"./rauf-faikcovers/cover5.jpg"},
+    {number:6, views:"2,35,456,764", time:"4:19", songName: "Can't Buy me Loving", songPath:"./rauf-faiksongs/6.mp3", coverPath:"./rauf-faikcovers/cover6.jpg"},    
 ]
 // redner the all songs name dynamicly
 
@@ -64,7 +64,7 @@ Array.from(document.getElementsByClassName("song-index-play-btn")).forEach((elem
     element.addEventListener('click', (e)=>{
         // console.log(e.target.id);
         index = parseInt(e.target.id)
-        songElement.src = `../rauf-faiksongs/${index+1}.mp3`;
+        songElement.src = `./rauf-faiksongs/${index+1}.mp3`;
         songElement.play();
         songElement.currentTime = 0
         masterPlay.style.display = "none";
@@ -84,7 +84,7 @@ document.getElementById("next").addEventListener("click", ()=>{
     else{
         index+=1;
     }
-    songElement.src = `../rauf-faiksongs/${index+1}.mp3`;
+    songElement.src = `./rauf-faiksongs/${index+1}.mp3`;
     songElement.play();
     songElement.currentTime = 0
     masterPlay.style.display = "none";
@@ -100,7 +100,7 @@ document.getElementById("previous").addEventListener("click", ()=>{
     else{
         index -= 1;
     }
-    songElement.src = `../rauf-faiksongs/${index+1}.mp3`;
+    songElement.src = `./rauf-faiksongs/${index+1}.mp3`;
     songElement.play();
     songElement.currentTime = 0
     masterPlay.style.display = "none";
